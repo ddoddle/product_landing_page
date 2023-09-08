@@ -1,0 +1,562 @@
+/* google font import link*/
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&family=Fira+Sans:ital,wght@1,500&family=Inconsolata:wght@700&family=Mukta:wght@600&family=Roboto:wght@100;400&family=Ysabeau+SC:wght@700&display=swap');
+
+html,
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Fasthand', cursive;
+  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Mukta', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Ysabeau SC', sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+/* Style the header navigation */
+header {
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  background-color: #333;
+  color: #fff;
+  padding: 7px 0;
+  z-index: 2;
+ 
+
+}
+
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+header h1 {
+  font-size: 1.5rem;
+  margin-left: 6px;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+}
+
+header li {
+  margin-right: 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+header a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header a:hover {
+  color: gray;
+}
+
+
+
+/* Styles for the toggle button */
+.toggle-button {
+  display: none;
+  cursor: pointer;
+  /* Adjust positioning */
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 24px;
+
+}
+
+@media (max-width: 768px) {
+
+  /* Hide the menu by default and show the toggle button */
+  #menu {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    
+    right: 0;
+    padding: 5px;
+ 
+  }
+  
+ 
+  #menu.active {
+    display: flex;
+  }
+
+
+  .toggle-button {
+
+    display: flex;
+
+  }
+
+  .toggle-button i {
+
+    font-size: 1.7rem;
+  }
+
+
+  .menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  /* Apply hover effect when hovering over the menu items */
+  .menu a:hover {
+    color: #007BFF;
+  }
+
+}
+
+
+/* Style the hero section */
+#hero {
+  
+  text-align: center;
+  padding: 50px 0;
+  background-image: url(product1\ \(1\).jpg);
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero .container {
+color:rgb(11, 1, 1);
+}
+
+#hero h2 {
+  margin-top: 5px;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+#hero p {
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+#hero a {
+  margin-top: 25px;
+  font-size: 1.2rem;
+}
+
+/* Style the call-to-action button */
+.cta-button {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #555;
+}
+
+/* Add styles for the Key Features section */
+#key-features {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+  text-align: center;
+}
+
+#key-features h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+#key-features .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#key-features .feature {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  max-width: 300px;
+  text-align: center;
+  position: relative;
+  /* Add position for z-index */
+  z-index: 1;
+  /* Set z-index value */
+  transition: transform 0.3s, box-shadow 0.3s;
+  /* Add hover transition */
+}
+
+#key-features .feature img {
+  max-width: 250px;
+  margin: 0 auto 15px;
+  border-radius: 20px;
+}
+
+#key-features .feature h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#key-features .feature p {
+  font-size: 16px;
+  color: #777;
+}
+
+/* Add hover effect with box shadow */
+#key-features .feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Style the pricing section */
+#pricing {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 50px 0;
+
+}
+
+.pricing-plan {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+  display: inline-block;
+}
+
+.pricing-plan h3 {
+  font-size: 2rem;
+
+}
+
+.pricing-plan h3,
+p,
+a {
+  margin-bottom: 8px;
+}
+
+.pricing-plan p {
+  font-size: 1.4rem;
+}
+
+.pricing-plan a {
+  margin-top: 25px;
+}
+
+
+#pricing h2 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+
+
+/* about section */
+
+.about-section {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+.img-section img {
+  border: 5px solid gray;
+  border-radius: 20px;
+  width: 300px;
+}
+
+.pars {
+  padding: 50px;
+  text-align: left;
+
+}
+
+.pars p {
+  font-size: 1.2rem;
+}
+
+.about-1 {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+@media (max-width:884px) {
+  .about-section {
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+  }
+
+  .pars {
+    padding: 10px;
+    text-overflow: ellipsis;
+    text-align: left;
+    margin-left: 10px;
+  }
+
+  .img-section img {
+    border: 5px solid gray;
+    border-radius: 20px;
+    width: 200px;
+  }
+
+  .about-section {
+    flex-direction: column-reverse;
+  }
+}
+
+
+
+
+/* FAQ section */
+.faq-container {
+
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 70px;
+}
+
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-question {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.faq-answer {
+  display: none;
+  margin-top: 10px;
+}
+
+.faq-container h2 {
+  font-size: 2.5rem;
+  margin: 10px;
+}
+
+.faq-item {
+  font-family: 'Ysabeau SC', sans-serif;
+  font-size: 1.5rem;
+}
+
+.faq-item {
+  margin-left: -3%;
+}
+
+.faq-item .faq-answer {
+  font-family: 'Ysabeau SC', sans-serif;
+}
+
+.faq-answer {
+  color: peru;
+}
+
+@media (max-width: 600px) {
+  .faq-container {
+    padding: 10px;
+    margin-top: 40px;
+  }
+
+  .faq-question {
+    margin: 25px;
+    font-size: 1.5rem;
+  }
+
+  .faq-answer {
+    font-size: 1.2rem;
+    margin: 25px;
+  }
+
+}
+
+
+/* Style the contact section */
+#contact {
+  background-color: #fff;
+
+  padding: 50px 0;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2.2rem;
+  font-weight: bolder;
+}
+
+#contact p {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+form input,
+form textarea,
+form button {
+  /* display: block; */
+  width: 70%;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+form button {
+  font-size: 1.5rem;
+}
+
+form textarea {
+  height: 150px;
+}
+
+
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Style the contact section */
+
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+
+}
+
+footer .container p {
+  font-size: 1.5rem;
+}
+
+/* Media query  */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    text-align: center;
+
+  }
+
+  header h1 {
+    margin-right: 20px;
+      /* margin-right: 80px;  */
+  
+  }
+
+  header ul {
+    margin-top: 20px;
+  }
+
+  header li {
+    margin: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+
+  }
+
+  #key-features .container {
+    flex-direction: column;
+  }
+
+  #key-features .feature {
+    max-width: 80%;
+    margin: 20px 0;
+  }
+
+  #key-features h2 {
+    font-size: 28px;
+  }
+
+  #key-features .feature {
+    max-width: 80%;
+    margin: 20px 0;
+    padding: 15px;
+  }
+
+  #key-features .feature h3 {
+    font-size: 22px;
+  }
+
+  #key-features .feature p {
+    font-size: 14px;
+  }
+
+  .feature img {
+    width: 200px;
+  }
+
+  #hero h2 {
+
+    font-size: 24px;
+  }
+
+  #hero p {
+    font-size: 16px;
+  }
+
+  .cta-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+
+  .pricing-plan {
+    margin: 20px 0;
+  }
+
+  .pricing-plan h3 {
+    font-size: 20px;
+  }
+
+  form input,
+  form textarea,
+  form button {
+    font-size: 1.1rem;
+  }
+
+}
