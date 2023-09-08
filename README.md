@@ -1,2 +1,2 @@
-# product_landing_page_infotrixs
+# product_landing_page
 product landing page
